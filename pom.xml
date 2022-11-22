@@ -78,6 +78,11 @@
             <artifactId>querydsl-apt</artifactId>
             <scope>provided</scope>
         </dependency>
+        		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>1.5.3.Final</version>
+		</dependency>
     </dependencies>
 
 </project>
