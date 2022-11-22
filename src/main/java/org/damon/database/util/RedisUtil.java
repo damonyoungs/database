@@ -11,9 +11,10 @@ import org.springframework.util.CollectionUtils;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /**
- * @Author chengrong.yang
+ * @Author Damon
  * @Date 2020/11/19 14:53
  */
 @Component
@@ -84,7 +85,7 @@ public class RedisUtil {
             if (key.length == 1) {
                 redisTemplate.delete(key[0]);
             } else {
-                redisTemplate.delete(CollectionUtils.arrayToList(key));
+                redisTemplate.delete(Arrays.stream(key).collect(Collectors.toList()));
             }
         }
     }

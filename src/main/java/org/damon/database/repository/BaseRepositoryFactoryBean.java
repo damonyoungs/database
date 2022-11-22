@@ -10,7 +10,7 @@ import javax.persistence.EntityManager;
 import java.io.Serializable;
 
 /**
- * @Author chengrong.yang
+ * @Author Damon
  * @Date 2020/12/7 11:16
  */
 public class BaseRepositoryFactoryBean <R extends JpaRepository<T, I>, T, I extends Serializable>

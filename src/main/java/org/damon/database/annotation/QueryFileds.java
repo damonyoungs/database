@@ -5,7 +5,7 @@ import org.damon.database.enums.QueryType;
 import java.lang.annotation.*;
 
 /**
- * @Author chengrong.yang
+ * @Author Damon
  * @Date 2020/12/25 14:27
  */
 @Target({ElementType.FIELD})

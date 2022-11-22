@@ -1,7 +1,7 @@
 package org.damon.database.enums;
 
 /**
- * @Author chengrong.yang
+ * @Author Damon
  * @Date 2020/12/25 14:31
  */
 public enum QueryType {

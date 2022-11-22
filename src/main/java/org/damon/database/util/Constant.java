@@ -1,7 +1,7 @@
 package org.damon.database.util;
 
 /**
- * @Author chengrong.yang
+ * @Author Damon
  * @Date 2020/12/2 16:15
  */
 public class Constant {

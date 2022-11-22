@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.persistence.EntityManager;
 
 /**
- * @Author chengrong.yang
+ * @Author Damon
  * @Date 2021/3/4 17:46
  */
 @Configuration

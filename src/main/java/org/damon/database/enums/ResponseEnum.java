@@ -1,7 +1,7 @@
 package org.damon.database.enums;
 
 /**
- * @Author chengrong.yang
+ * @Author Damon
  * @Date 2020/11/18 10:54
  */
 public enum ResponseEnum {

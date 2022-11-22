@@ -9,7 +9,6 @@ import com.querydsl.core.types.dsl.*;
 import org.damon.database.annotation.QueryFileds;
 import org.damon.database.enums.QueryType;
 
-import javax.annotation.Nullable;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -17,7 +16,7 @@ import java.math.BigDecimal;
 import java.util.*;
 
 /**
- * @Author chengrong.yang
+ * @Author Damon
  * @Date 2021/3/8 19:15
  */
 public class QueryDslUtil<T> extends EntityPathBase<T> {
@@ -32,7 +31,7 @@ public class QueryDslUtil<T> extends EntityPathBase<T> {
         super(type, metadata);
     }
 
-    public QueryDslUtil(Class<? extends T> type, PathMetadata metadata, @Nullable PathInits inits) {
+    public QueryDslUtil(Class<? extends T> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
     }
 

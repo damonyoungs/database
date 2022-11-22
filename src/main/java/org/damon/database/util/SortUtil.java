@@ -3,7 +3,7 @@ package org.damon.database.util;
 import org.springframework.data.domain.Sort;
 
 /**
- * @Author chengrong.yang
+ * @Author Damon
  * @Date 2021/2/1 14:52
  */
 public class SortUtil {
