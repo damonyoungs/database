@@ -127,7 +127,7 @@ public class QueryDslUtil<T> extends EntityPathBase<T> {
             case LESS:
                 booleanBuilder.and(number.lt(obj));
                 break;
-            case NEQUAL:
+            case UNEQUAL:
                 booleanBuilder.and(number.ne(obj));
                 break;
             default:
@@ -160,7 +160,7 @@ public class QueryDslUtil<T> extends EntityPathBase<T> {
             case LESS:
                 booleanBuilder.and(dateTime.lt(obj));
                 break;
-            case NEQUAL:
+            case UNEQUAL:
                 booleanBuilder.and(dateTime.ne(obj));
                 break;
             default:
@@ -194,7 +194,7 @@ public class QueryDslUtil<T> extends EntityPathBase<T> {
 
     private void getPredicate(Boolean obj, String fieldName, BooleanBuilder booleanBuilder, QueryType type) {
         BooleanPath aBoolean = createBoolean(fieldName);
-        if (type == QueryType.NEQUAL) {
+        if (type == QueryType.UNEQUAL) {
             booleanBuilder.and(aBoolean.ne(obj));
         } else {
             booleanBuilder.and(aBoolean.eq(obj));
@@ -225,7 +225,7 @@ public class QueryDslUtil<T> extends EntityPathBase<T> {
             case LESS:
                 booleanBuilder.and(string.lt(obj));
                 break;
-            case NEQUAL:
+            case UNEQUAL:
                 booleanBuilder.and(string.ne(obj));
                 break;
             default:

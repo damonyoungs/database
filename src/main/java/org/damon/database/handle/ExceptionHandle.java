@@ -1,11 +1,11 @@
 package org.damon.database.handle;
 
 import cn.hutool.json.JSONUtil;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.damon.database.exception.MyException;
 import org.damon.database.enums.ResponseEnum;
 import org.damon.database.util.ResponseVO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.validation.BindException;
@@ -24,11 +24,11 @@ import java.util.Locale;
  * @Date 2020/11/20 9:57
  */
 @RestControllerAdvice
+@RequiredArgsConstructor
 @Slf4j
 public class ExceptionHandle {
 
-    @Autowired
-    MessageSource messageSource;
+    private final MessageSource messageSource;
 
     @ExceptionHandler(BindException.class)
     public ResponseVO<Object> validExceptionHandler(BindException e) {

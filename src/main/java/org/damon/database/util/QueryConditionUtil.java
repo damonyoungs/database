@@ -184,7 +184,7 @@ public class QueryConditionUtil<T> {
                 return criteriaBuilder.lessThanOrEqualTo(objectPath.as(BigDecimal.class), obj);
             case LESS:
                 return criteriaBuilder.lessThan(objectPath.as(BigDecimal.class), obj);
-            case NEQUAL:
+            case UNEQUAL:
                 return criteriaBuilder.notEqual(objectPath.as(BigDecimal.class), obj);
             default:
                 return criteriaBuilder.equal(objectPath.as(BigDecimal.class), obj);
@@ -215,7 +215,7 @@ public class QueryConditionUtil<T> {
                 return criteriaBuilder.lessThanOrEqualTo(objectPath.as(Integer.class), obj);
             case LESS:
                 return criteriaBuilder.lessThan(objectPath.as(Integer.class), obj);
-            case NEQUAL:
+            case UNEQUAL:
                 return criteriaBuilder.notEqual(objectPath.as(Integer.class), obj);
             default:
                 return criteriaBuilder.equal(objectPath.as(Integer.class), obj);
@@ -246,7 +246,7 @@ public class QueryConditionUtil<T> {
                 return criteriaBuilder.lessThanOrEqualTo(objectPath.as(Long.class), obj);
             case LESS:
                 return criteriaBuilder.lessThan(objectPath.as(Long.class), obj);
-            case NEQUAL:
+            case UNEQUAL:
                 return criteriaBuilder.notEqual(objectPath.as(Long.class), obj);
             default:
                 return criteriaBuilder.equal(objectPath.as(Long.class), obj);
@@ -277,7 +277,7 @@ public class QueryConditionUtil<T> {
                 return criteriaBuilder.lessThanOrEqualTo(objectPath.as(Float.class), obj);
             case LESS:
                 return criteriaBuilder.lessThan(objectPath.as(Float.class), obj);
-            case NEQUAL:
+            case UNEQUAL:
                 return criteriaBuilder.notEqual(objectPath.as(Float.class), obj);
             default:
                 return criteriaBuilder.equal(objectPath.as(Float.class), obj);
@@ -308,7 +308,7 @@ public class QueryConditionUtil<T> {
                 return criteriaBuilder.lessThanOrEqualTo(objectPath.as(Double.class), obj);
             case LESS:
                 return criteriaBuilder.lessThan(objectPath.as(Double.class), obj);
-            case NEQUAL:
+            case UNEQUAL:
                 return criteriaBuilder.notEqual(objectPath.as(Double.class), obj);
             default:
                 return criteriaBuilder.equal(objectPath.as(Double.class), obj);
@@ -339,7 +339,7 @@ public class QueryConditionUtil<T> {
                 return criteriaBuilder.lessThanOrEqualTo(objectPath.as(Date.class), obj);
             case LESS:
                 return criteriaBuilder.lessThan(objectPath.as(Date.class), obj);
-            case NEQUAL:
+            case UNEQUAL:
                 return criteriaBuilder.notEqual(objectPath.as(Date.class), obj);
             default:
                 return criteriaBuilder.equal(objectPath.as(Date.class), obj);
@@ -347,14 +347,14 @@ public class QueryConditionUtil<T> {
     }
 
     private Predicate getPredicate(Boolean obj, String fieldName, CriteriaBuilder criteriaBuilder, Root<T> root, QueryType type) {
-        if (type == QueryType.NEQUAL) {
+        if (type == QueryType.UNEQUAL) {
             return criteriaBuilder.notEqual(root.get(fieldName).as(Boolean.class), obj);
         }
         return criteriaBuilder.equal(root.get(fieldName).as(Boolean.class), obj);
     }
 
     private Predicate getPredicate(Boolean obj, String fieldName, CriteriaBuilder criteriaBuilder, Join<Object, Object> join, QueryType type) {
-        if (type == QueryType.NEQUAL) {
+        if (type == QueryType.UNEQUAL) {
             return criteriaBuilder.notEqual(join.get(fieldName).as(Boolean.class), obj);
         }
         return criteriaBuilder.equal(join.get(fieldName).as(Boolean.class), obj);
@@ -392,7 +392,7 @@ public class QueryConditionUtil<T> {
                 return criteriaBuilder.lessThanOrEqualTo(objectPath.as(String.class), obj);
             case LESS:
                 return criteriaBuilder.lessThan(objectPath.as(String.class), obj);
-            case NEQUAL:
+            case UNEQUAL:
                 return criteriaBuilder.notEqual(objectPath.as(String.class), obj);
             default:
                 return criteriaBuilder.equal(objectPath.as(String.class), obj);

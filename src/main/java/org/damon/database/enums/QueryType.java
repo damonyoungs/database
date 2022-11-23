@@ -6,7 +6,7 @@ package org.damon.database.enums;
  */
 public enum QueryType {
     EQUAL,
-    NEQUAL,
+    UNEQUAL,
     IN,
     LIKE,
     LEFT_LIKE,

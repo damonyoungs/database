@@ -1,6 +1,6 @@
 package org.damon.database.util;
 
-import cn.hutool.core.util.StrUtil;
+import cn.hutool.core.text.CharSequenceUtil;
 import cn.hutool.extra.spring.SpringUtil;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -39,7 +39,7 @@ public class HttpContextUtil {
     }
 
     private static Long getSession(String authorization) {
-        if (StrUtil.isNotEmpty(authorization)) {
+        if (CharSequenceUtil.isNotEmpty(authorization)) {
             RedisUtil redisUtil = SpringUtil.getBean(RedisUtil.class);
             SysUserRedisVO sysUserRedisVO = redisUtil.get(authorization, SysUserRedisVO.class);
             if (null != sysUserRedisVO) {

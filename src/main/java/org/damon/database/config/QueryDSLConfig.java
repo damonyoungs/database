@@ -1,7 +1,7 @@
 package org.damon.database.config;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,10 +12,10 @@ import javax.persistence.EntityManager;
  * @Date 2021/3/4 17:46
  */
 @Configuration
+@RequiredArgsConstructor
 public class QueryDSLConfig {
 
-    @Autowired
-    private EntityManager entityManager;
+    private final EntityManager entityManager;
 
     @Bean
     public JPAQueryFactory getQueryFactory() {
